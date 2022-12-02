@@ -1,0 +1,8 @@
+*************************
+
+To use the form you must embed it to your website/section. 
+<iframe frameborder="0" width="100%" height="1100px"src='#######'></iframe>
+
+
+######---> This must be replaced with the google script URL.  
+You will find the google script Url after you deploy the script.  

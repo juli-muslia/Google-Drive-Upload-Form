@@ -8,7 +8,7 @@ function doGet(e) {
     
     Logger.log(JSON.stringify(e));
     
-    var destination_id = '########';  // ID OF GOOGLE DRIVE DIRECTORY;
+    var destination_id = '########';  // ID OF GOOGLE DRIVE DIRECTORY. https://drive.google.com/drive/folders/############ . -- Replace it with the code after /folders/#####
     var destination = DriveApp.getFolderById(destination_id);
     var data = Utilities.base64Decode(e.parameter.fileData);
     var blob = Utilities.newBlob(data, e.parameter.mimeType, e.parameter.fileName);
@@ -22,7 +22,7 @@ function doGet(e) {
   
   function listRecord(band_name, vorname, nachname, email, filename,ich_stimme_zu, ich_stimme_zu_2, ich_stimme_zu_3) // Html tags that are used for differente fields of the form. 
   {
-    var url = '##########';  //URL OF GOOGLE SHEET;
+    var url = 'https://docs.google.com/spreadsheets/d/######################';  //URL OF GOOGLE EXCEL SHEET;
     var ss= SpreadsheetApp.openByUrl(url);
     var recordsSheet = ss.getSheetByName("Sheet1");
     recordsSheet.appendRow([new Date(), band_name, vorname, nachname,email,   filename, ich_stimme_zu, ich_stimme_zu_2, ich_stimme_zu_3]);
